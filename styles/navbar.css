@@ -1,0 +1,58 @@
+.inside-box {
+  /* display: flex;
+  flex-direction: row;
+  gap: 16px; */
+  width: 100vw;
+}
+
+.inside-box ul li{
+  width: 18%;
+  vertical-align: top;
+}
+
+.dropdown li {
+  display: flex;
+  text-align: center;
+  background: linear-gradient(
+   90deg, #E4E5E6, #00416A
+  )  /* rgb(0 0 0 / .9); */
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li a:hover {
+  background: transparent;
+  color: var(--orange);
+}
+
+ul li:hover ul.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li ul li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (hover: hover) {
+  /* targets devices that can hover */
+}
+
+@media (hover: none) {
+  /* targets devices that don't hover */
+
+  ul li:active ul.dropdown 
+  {
+    display: block;
+  }
+}
